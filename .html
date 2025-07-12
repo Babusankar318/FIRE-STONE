@@ -1,0 +1,840 @@
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firestone Fire Protection India Ltd - Fire Safety Solutions</title>
+    <style>
+
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            line-height: 1.1;
+            color: #333;
+        }
+        
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #d92323;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #d92323;
+        }
+        
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1552664730-d307ca884978');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero-content {
+            width: 100%;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #d92323fa;
+            color: rgb(255, 255, 255);
+            padding: 12px 9px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #b51c1c;
+        }
+        
+        section {
+            padding: 30px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: #333333;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+             color: #d92323;
+            max-width: 2000px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+        }
+        
+        .about-image img {
+            width: 70%;
+            border-radius: 105px;
+            box-shadow:  5px 15px rgba(0, 0, 0, 0.441);
+        }
+        
+        .vision-mission {
+            background-color: #f9f9f9;
+            padding: 25px 0;
+        }
+        
+        .vm-container {
+            display: flex;
+            gap: 100px;
+        }
+        
+        .vision, .mission {
+            flex: 1;
+            background-color: white;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 0 5px 50px rgba(0,0,0,0.05);
+        }
+        
+        .vision h3, .mission h3 {
+            color: #d92323;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .services {
+            background-color: white;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 2px;
+        }
+        
+        .service-content h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .message {
+            background-color: #f9f9f9;
+        }
+        
+        .message-content {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+        
+        .message-image {
+            flex: 1;
+        }
+        
+        .message-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        .message-text {
+            flex: 10;
+        }
+        
+        .message-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .message-text p {
+            margin-bottom: 10px;
+        }
+        
+        .message-text .signature {
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        
+        .careers {
+            background-color: white;
+        }
+        
+        .career-form {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 10px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 100;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select,
+        .form-group .file-input {
+            width: 100%;
+            padding: 8px;
+            border: 2px solid #ddd;
+            border-radius: 2px;
+            font-size: 12px;
+        }
+        
+        .form-group .file-input {
+            padding: 6px;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+        }
+        
+        .contact {
+            background-color: white;
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        
+        .info-icon {
+            font-size: 24px;
+            color: #d92323;
+            margin-right: 20px;
+        }
+        
+        .info-content h3 {
+            font-size: 15px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .info-content a {
+            color: #d92323;
+            text-decoration: none;
+        }
+        
+        .google-map {
+            margin-top: 30px;
+            height: 200px;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .google-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            padding: 0 15px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #d92323;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #bbb;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            .about-content, .message-content, .contact-container {
+                flex-direction: column;
+            }
+            
+            .vm-container {
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            .footer-column {
+                margin-bottom: 30px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+         <div class="container">
+      <div>
+        <img src="img/Picture1.jpg" width="250" height="=500" />
+      </div>
+      
+        <p><a href="https://www.linkedin.com/in/babusankar-moorthy-4026172a3" target="_blank" style="color:white;">LinkedIn</a></p>
+      </div>
+    </div>
+        <div class="container header-content">
+            <div class="logo">Firestone Fire Protection India Ltd</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#message">Message</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Your Trusted Fire Protection Partner</h1>
+            <p>Providing integrated fire safety solutions with uncompromised quality since 2022</p>
+            <a href="#contact" class="btn">Get In Touch</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+
+                <p>One of the renowned Fire Protection and Prevention Systems Integrators in India</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Founded and established in the year 2022, our professional approach in providing solutions towards optimal application, with uncompromised quality, customer support and competitive pricing have been some of the driving factors behind our accomplishments & achievements.</p>
+                    <p>Firestone Fire Protection India Ltd has been in the business of Integrated Solutions since 2022. With our state-of-the-art facilities across India, we deliver quality solutions to our invaluable customers - customers who appreciate technology and can bank on a system specifically customized to meet their varied security needs.</p>
+                    <p>We have our own Design Team where we prepare all working drawings according to NBC, NFPA codes & standards, TAC Norms & we are 100% responsible for all the Fire Drawings.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Team meeting">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="vision-mission">
+        <div class="container vm-container">
+            <div class="vision">
+                <h3>Our Vision</h3>
+                <p>To Become "India's No. - 1, fire protection Company"</p>
+            </div>
+            <div class="mission">
+                <h3>Our Mission</h3>
+                <p>"Our Design, Supply and Erection of fire safety Systems, will be Value For Money Solutions, Sustainable and as per local & international Government Norms."</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive fire protection solutions tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/hydrant.webp">
+                    </div>
+                    <div class="service-content">
+                        <h3>Fire Hydrant System</h3>
+                       
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/pum.jpg">
+                    </div>
+                    <div class="service-content">
+                        <h3>Fire Pump Room System</h3>
+                       
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/SP.jpg">
+                    </div>
+                    <div class="service-content">
+                        <h3>Automatic Sprinkler System</h3>
+                        
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/fire-alarm.jpg">
+                    </div>
+                    <div class="service-content">
+                        <h3>Fire Alarm System</h3>
+                        
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/PA.jpg">
+                    </div>
+                    <div class="service-content">
+                        <h3>Public Address System</h3>
+                       
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/CO2.jpg">
+                    </div>
+                    <div class="service-content">
+                        <h3>FM 200 & Aerosol & CO2 System</h3>
+                        
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/FOAM.jpg">
+                    </div>
+                    <div class="service-content">
+                        <h3>Foam System</h3>
+                       
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/FE.png">
+                    </div>
+                    <div class="service-content">
+                        <h3>Fire Extinguishers</h3>
+                       
+                    </div>
+                </div>
+            
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/cu.jpg">
+                    </div>
+                    <div class="service-content">
+                        <h3>Water Curtain System</h3>
+                        
+                    </div>
+                </div>
+
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/AIR.webp">
+                    </div>
+                    <div class="service-content">
+                        <h3>Air Crafts fire safety</h3>
+                       
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/OIL.webp">
+                    </div>
+                    <div class="service-content">
+                        <h3>Oil & Gas fire safety</h3>
+                       
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="img/HEALTH.jpg"  >
+                    </div>
+                    <div class="service-content">
+                        <h3>Health Care fire safety</h3>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="message" class="message">
+        <div class="container">
+            <div class="section-title">
+                <h2>Message From Chairman</h2>
+            </div>
+            <div class="message-content">
+                <div class="message-image">
+                    
+                </div>
+                <div class="message-text">
+                    <h3>Chairman and Managing Director</h3>
+                    <p>I am pleased to present to you the Standard Operating Procedures (SOPs) Manual of Firestone Fire Protection India Ltd.</p>
+                    <p>I take great pride in the achievements of our employees, whose commitment and dedication continue to drive our company forward. At the same time, I believe that a large family like ours must be united by a common vision and inspired by shared values.</p>
+                    <p>Our HR philosophy reflects this belief: we aim to ensure the best possible alignment between our employees, their roles, and the projects they work on. We want everyone at Firestone to enjoy what they do and find meaning in their contributions. For this reason, we place strong emphasis on both competence and attitude when selecting team members.</p>
+                    <p>I am confident that this SOPs Manual will help you better understand our practices and expectations, and assist you in becoming a valuable part of our team. This manual represents our effort to provide you with clear, useful, and actionable guidance.</p>
+                    <p>I look forward to your continued commitment, hard work, and team spirit as we work together toward a bright and successful future for all.</p>
+                    <p class="signature">Babusankar<br>Chairman and Managing Director</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="careers" class="careers">
+        <div class="container">
+            <div class="section-title">
+                <h2>Careers</h2>
+                <p>Join our team of fire protection experts</p>
+            </div>
+            <div class="career-form">
+                <form>
+                    <div class="form-group">
+                        <label for="career-name">Full Name</label>
+                        <input type="text" id="career-name" placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="career-email">Email Address</label>
+                        <input type="email" id="career-email" placeholder="Enter your email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="career-phone">Mobile Number</label>
+                        <input type="tel" id="career-phone" placeholder="Enter your 10 digit mobile number">
+                    </div>
+                    <div class="form-group">
+                        <label for="career-location">Preferred Location</label>
+                        <select id="career-location">
+                            <option value="sivakasi">Sivakasi</option>
+                            <option value="bangalore">Bangalore</option>
+                            <option value="chennai">Chennai</option>
+                            <option value="hyderabad">Hyderabad</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="sivakasi">UAE</option>
+                            <option value="bangalore">KSA</option>
+                            <option value="chennai">Kuwait</option>
+                            <option value="hyderabad">Oman</option>
+                            <option value="mumbai">Delhi</option>
+                             <option value="hyderabad">Kochi</option>
+                            <option value="mumbai">Telangana</option>
+                             <option value="sivakasi">Kolkata</option>
+                            <option value="bangalore">Ahmedabad </option>
+                            <option value="chennai">Chennai</option>
+                            <option value="hyderabad">Hyderabad</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="sivakasi">UAE</option>
+                            <option value="bangalore">KSA</option>
+                            <option value="chennai">Kuwait</option>
+                            <option value="hyderabad">Oman</option>
+                            <option value="mumbai">Delhi</option>
+                             <option value="hyderabad">Kochi</option>
+                            <option value="mumbai">Telangana</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="career-experience">Experience (Years)</label>
+                        <input type="number" id="career-experience" placeholder="Enter your experience in years">
+                    </div>
+                    <div class="form-group">
+                        <label for="career-resume">Upload Resume</label>
+                        <input type="file" id="career-resume" class="file-input">
+                    </div>
+                    <button type="submit" class="btn">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team for all your fire protection needs</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your valid email address">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Mobile Number</label>
+                            <input type="tel" id="phone" placeholder="Enter your 10 digit mobile number">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Enter your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h3>Address</h3>
+                            <p>360 West Street, Pallapatti, Sivakasi, Tamilnadu, India - 626130</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-content">
+                            <h3>Phone</h3>
+                            <p>+91 9385693092</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p><a href="mailto:babusankar573@gmail.com">babusankar573@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">⏱️</div>
+                        <div class="info-content">
+                            <h3>Working Hours</h3>
+                            <p>Weekdays: From 9.30 am to 6.30 pm</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🔗</div>
+                        <div class="info-content">
+                            <h3>LinkedIn</h3>
+                            <p><a href="https://www.linkedin.com/in/babusankar-moorthy-4026172a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Connect with us on LinkedIn</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="google-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.283394398295!2d77.79180397488104!3d9.448451090610132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b013faea4a2ff03%3A0x65cbb3859916b5b1!2s360%20West%20St%2C%20Pallapatti%2C%20Sivakasi%2C%20Tamil%20Nadu%20626130!5e0!3m2!1sen!2sin!4v1720684620000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                allowfullscreen="" 
+                                loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>Firestone Fire Protection India Ltd is one of the renowned Fire Protection and Security Systems Integrators in India, providing integrated solutions since 2022.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#message">Message</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Fire Hydrant System</a></li>
+                        <li><a href="#">Fire Pump Room System</a></li>
+                        <li><a href="#">Automatic Sprinkler System</a></li>
+                        <li><a href="#">Fire Alarm System</a></li>
+                        <li><a href="#">Public Address System</a></li>
+                        <li><a href="#">Fire Extinguishers</a></li>
+                        <li><a href="#">Foam System</a></li>
+                        <li><a href="#">Metro Rail Fire Safety</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>360 West Street, Pallapatti</li>
+                        <li>Sivakasi, Tamilnadu, India - 626130</li>
+                        <li>Phone: +91 9385693092</li>
+                        <li>Email: <a href="mailto:babusankar573@gmail.com">babusankar573@gmail.com</a></li>
+                        <li>LinkedIn: <a href="https://www.linkedin.com/in/babusankar-moorthy-4026172a3" target="_blank">Babusankar Moorthy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+  </section>
+            <div class="copyright">
+                <p>&copy; 2025 Firestone Fire Protection India Ltd. All Rights Reserved. | Privacy Policy</p>
+                <p>Designed by G Web Solution</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
